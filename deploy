@@ -3,8 +3,8 @@ source "$(dirname $0)/bin/conf"
 
 [ "$USER" = "root" ] # USER MUST BE ROOT
 
-mkdir -p "$logdir"
-chown www-data:www-data "$logdir"
+mkdir -p "$logdir" "$datadir"
+chown www-data:www-data "$logdir" "$datadir"
 
 ### INSTALL THIS SYSTEM ###
 rsync -av --delete "$(dirname $0)/bin/" "$appdir/"
@@ -21,3 +21,4 @@ git clone "https://github.com/$contents_owner/$contents.git"
 chown www-data:www-data "$contentsdir" -R
 
 echo "call fetch.cgi from GitHub"
+
