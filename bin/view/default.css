@@ -25,4 +25,11 @@ a { color:red; text-decoration:none;}
 #article-body th { border:1px black solid; background-color:#EEE; }
 #article-body td { border:1px black solid; }
 
-#article-footer { width:100%; color:white;
+#article-footer { width:100%; color:white; background-color:#555; margin:10px 0px; }
+#article-footer a { color:white; }
+
+#widgets { width:320px; margin:20px; float:right; }
+#widgets h1{ font-weight:normal; width:100%; font-size:100%; padding:0px 20px; background-color:#555; color:white; }
+#widgets h2{ font-weight:normal; width:100%; font-size:80%; padding:0px 20px; background-color:#EEE; color:black; }
+#widgets a{ color:black; font-size:80%; }
+#widgets aside{ width:260px; margin:0px 20px; padding-bottom:20px; }
