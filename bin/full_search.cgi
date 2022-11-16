@@ -9,7 +9,7 @@ cat << FIN
 Content-Type: text/html
 
 <h1>Search</h1>
-<input type="text" id="full_search-box" value="$numchar" />
+<input type="text" id="full-search-box" value="$numchar" />
 <button onclick="fullSearch(document.getElementById('full-search-box').value)" >Search</button><br />
 FIN
 
