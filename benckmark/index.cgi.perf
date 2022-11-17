@@ -1,0 +1,15 @@
+#!/bin/bash -xv
+source "$(dirname $0)/../bin/conf"
+url='http://jsv09.prv.ict-kanazawa.ac.jp/'
+tmp=/tmp/$$
+
+awk '{print $3}' $datadir/{post,page}_list |
+sed 's;s/;=;' |
+sed "s;^;${url}?;" > $tmp-list
+
+time head -n 1000 $tmp-list |
+xargs -P300 -n 1 curl --noproxy ict-kanazawa.ac.jp 2> /dev/null |
+grep '<title>' |
+nl
+
+rm -f $tmp-*
